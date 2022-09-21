@@ -1,0 +1,40 @@
+{
+	"ID": "8ad76c4f4e4db02aa8359cb3a856979a",
+	"TypeName": "FlaxEngine.SceneAsset",
+	"EngineBuild": 6334,
+	"Data": [
+		{
+			"ID": "8ad76c4f4e4db02aa8359cb3a856979a",
+			"TypeName": "FlaxEngine.Scene",
+			"LightmapSettings": {
+				"IndirectLightingIntensity": 1.0,
+				"GlobalObjectsScale": 1.0,
+				"ChartsPadding": 3,
+				"AtlasSize": 1024,
+				"BounceCount": 1,
+				"CompressLightmaps": true,
+				"UseGeometryWithNoMaterials": true,
+				"Quality": 10
+			}
+		},
+		{
+			"ID": "26c5612f4cfc6cd1400ba7b0a8aef832",
+			"TypeName": "FlaxEngine.Camera",
+			"ParentID": "8ad76c4f4e4db02aa8359cb3a856979a",
+			"Name": "Camera",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 150.0,
+					"Z": -300.0
+				}
+			}
+		},
+		{
+			"ID": "aa3eeea149c06691582ac8af54e093cc",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "8ad76c4f4e4db02aa8359cb3a856979a",
+			"Name": "EngineRunner"
+		}
+	]
+}
