@@ -17,6 +17,7 @@ namespace Rhubarb
         /// <inheritdoc/>
         public override void OnStart()
         {
+            RhubarbNativeFunctions.RunNativeAction(new Vector4(1, 1, 1, 1));
             // Here you can add code that needs to be called when script is created, just before the first game update
         }
 
