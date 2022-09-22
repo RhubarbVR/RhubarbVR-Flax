@@ -35,6 +35,14 @@
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "8ad76c4f4e4db02aa8359cb3a856979a",
 			"Name": "EngineRunner"
+		},
+		{
+			"ID": "30d35cac4208c7cd0fbbe2aa2c10a7c2",
+			"TypeName": "Rhubarb.EngineRunner",
+			"ParentID": "aa3eeea149c06691582ac8af54e093cc",
+			"V": {
+	"Camera": "26c5612f4cfc6cd1400ba7b0a8aef832"
+}
 		}
 	]
 }

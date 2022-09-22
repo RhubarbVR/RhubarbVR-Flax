@@ -1,33 +1,18 @@
 {
 	"ID": "2364031e4e327637c1ad88b415fa756e",
 	"TypeName": "FlaxEditor.Content.Settings.BuildSettings",
-	"EngineBuild": 6222,
+	"EngineBuild": 6334,
 	"Data": {
 	"MaxAssetsPerPackage": 4096,
 	"MaxPackageSizeMB": 1024,
 	"ContentKey": 0,
-	"ForDistribution": false,
-	"SkipPackaging": false,
+	"ForDistribution": true,
+	"SkipPackaging": true,
+	"AdditionalAssets": null,
+	"AdditionalAssetFolders": [],
 	"ShadersNoOptimize": false,
 	"ShadersGenerateDebugData": false,
 	"Presets": [
-		{
-			"Name": "Development",
-			"Targets": [
-				{
-					"Name": "Windows 64bit",
-					"Output": "Output\\Win64",
-					"Platform": 2,
-					"Mode": 1
-				},
-				{
-					"Name": "Windows 32bit",
-					"Output": "Output\\Win32",
-					"Platform": 1,
-					"Mode": 1
-				}
-			]
-		},
 		{
 			"Name": "Release",
 			"Targets": [
@@ -35,25 +20,34 @@
 					"Name": "Windows 64bit",
 					"Output": "Output\\Win64",
 					"Platform": 2,
-					"Mode": 0
+					"Mode": 2,
+					"CustomDefines": [
+						"SHIPPING"
+					],
+					"PreBuildAction": null,
+					"PostBuildAction": null
 				},
 				{
-					"Name": "Windows 32bit",
-					"Output": "Output\\Win32",
-					"Platform": 1,
-					"Mode": 0
+					"Name": "Linux 64bit",
+					"Output": "Output\\Linux_64",
+					"Platform": 6,
+					"Mode": 2,
+					"CustomDefines": [
+						"SHIPPING"
+					],
+					"PreBuildAction": null,
+					"PostBuildAction": null
 				},
 				{
-					"Name": "Xbox One",
-					"Output": "Output\\XboxOne",
-					"Platform": 5,
-					"Mode": 0
-				},
-				{
-					"Name": "UWP 64bit",
-					"Output": "Output\\WinStore64",
-					"Platform": 4,
-					"Mode": 0
+					"Name": "MacOS",
+					"Output": "Output\\Mac",
+					"Platform": 12,
+					"Mode": 2,
+					"CustomDefines": [
+						"SHIPPING"
+					],
+					"PreBuildAction": null,
+					"PostBuildAction": null
 				}
 			]
 		}

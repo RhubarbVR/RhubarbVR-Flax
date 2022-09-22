@@ -6,7 +6,7 @@
 	"WindowMode": 0,
 	"ScreenWidth": 1280,
 	"ScreenHeight": 720,
-	"ResizableWindow": false,
+	"ResizableWindow": true,
 	"RunInBackground": false,
 	"ForceSingleInstance": true,
 	"OverrideIcon": null,
