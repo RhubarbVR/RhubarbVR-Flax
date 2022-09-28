@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Security;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using FlaxEngine;
 using Rhubarb.FlaxLinking;
@@ -35,12 +38,23 @@ namespace Rhubarb
 
         public bool StartInVR = false;
 
+
+        private void MonoHacks()
+        {
+            //Todo: actually check certification
+            ServicePointManager.ServerCertificateValidationCallback =
+                    delegate (object s, X509Certificate certificate,
+                             X509Chain chain, SslPolicyErrors sslPolicyErrors)
+                    { return true; };
+        }
+
         /// <inheritdoc/>
         public override void OnStart()
         {
             if (RLog.Instance == null)
             {
                 RLog.Instance = new FlaxRlog();
+                MonoHacks();
             }
             else
             {
@@ -63,7 +77,7 @@ namespace Rhubarb
                 _ = this;
             }
             var platform = Platform.PlatformType;
-            if(platform == PlatformType.Android)
+            if (platform == PlatformType.Android)
             {
                 RLog.Info("Is on Android");
             }
@@ -90,7 +104,7 @@ namespace Rhubarb
 
         private void ProcessCleanup()
         {
-            if(engine == null)
+            if (engine == null)
             {
                 RLog.Err("Engine not started for cleanup");
                 return;
@@ -104,10 +118,10 @@ namespace Rhubarb
                     engine.IsCloseing = true;
                     engine.Dispose();
                     engine = null;
-                    REngine.MainEngine = null; 
+                    REngine.MainEngine = null;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 RLog.Err("Failed to start Rhubarb CleanUp " + ex.ToString());
             }
