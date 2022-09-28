@@ -21,14 +21,7 @@
 			"ID": "26c5612f4cfc6cd1400ba7b0a8aef832",
 			"TypeName": "FlaxEngine.Camera",
 			"ParentID": "8ad76c4f4e4db02aa8359cb3a856979a",
-			"Name": "Camera",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": 150.0,
-					"Z": -300.0
-				}
-			}
+			"Name": "Camera"
 		},
 		{
 			"ID": "aa3eeea149c06691582ac8af54e093cc",

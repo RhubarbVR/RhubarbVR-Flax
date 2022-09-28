@@ -29,11 +29,11 @@ namespace Rhubarb
 
         public SupportedFancyFeatures SupportedFeatures => SupportedFancyFeatures.Basic;
 
-        public bool ForceLibLoad =>false;
+        public bool ForceLibLoad => true;
 
         public bool SpawnPlayer => true;
 
-        public bool CanRender => false;
+        public bool CanRender => true;
 
         public bool CanAudio => false;
 
@@ -76,6 +76,8 @@ namespace Rhubarb
 
         public void LoadStatics()
         {
+            RTexture2D.Instance = new FlaxRTexture();
+            RRenderer.Instance = new FlaxRRender();
             RTime.Instance = new FlaxRTime();
             new RBullet.BulletPhsyicsLink(true).RegisterPhysics();
         }

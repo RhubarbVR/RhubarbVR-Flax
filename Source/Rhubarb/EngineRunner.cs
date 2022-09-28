@@ -98,7 +98,7 @@ namespace Rhubarb
 #endif 
                 ProcessCleanup();
             };
-            engine.Init();
+            engine.Init(false);
         }
         private bool IsDisposeing { set; get; }
 
