@@ -43,3 +43,5 @@ _ReSharper*/
 
 # Ignore Nuget packages folder
 packages/
+settings.json
+rhuCookie
